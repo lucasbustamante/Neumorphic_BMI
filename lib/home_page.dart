@@ -26,43 +26,47 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 15),
           Container(
-              height: MediaQuery.of(context).size.height * 0.48,
+              height: MediaQuery.of(context).size.height * 0.44,
             width: MediaQuery.of(context).size.width,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Column(
-                children: [
-                  Button('7'),
-                  Button('4'),
-                  Button('1')
-                ],
-              ),
-                Column(
+                Expanded(child: Column(
                   children: [
-                    Button('8'),
-                    Button('5'),
-                    Button('2'),
-                    Button('0')
+                    Button('7'),
+                    Button('4'),
+                    Button('1')
                   ],
+                ),),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Button('8', flex: true,),
+                      Button('5', flex: true,),
+                      Button('2', flex: true,),
+                      Button('0', flex: true,)
+                    ],
+                  ),
                 ),
-                Column(
+                Expanded(child: Column(
                   children: [
-                    Button('9'),
-                    Button('6'),
-                    Button('3'),
-                    Button('.')
+                    Button('9', flex: true,),
+                    Button('6', flex: true,),
+                    Button('3', flex: true,),
+                    Button('.', flex: true,)
                   ],
-                ),
-                Column(
-                  children: [
-                    Button('AC', flex: true,),
-                    Button('<',flex: true,),
-                    Button('GO', flex: true,)
-                  ],
+                ),),
+                Expanded(
+                  child: Column(
+                    children: [
+                      Button('AC', flex: true,),
+                      Button('<',flex: true,),
+                      Button('GO', flex: true,)
+                    ],
+                  ),
                 )],
             ),
-          )
+          ),
         ],
       ),
     );

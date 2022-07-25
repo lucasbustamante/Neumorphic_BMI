@@ -12,7 +12,7 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var size = MediaQuery.of(context).size.height*0.12;
+    var size = MediaQuery.of(context).size.height*0.11;
 
     int flexy = 1;
     if(flex == null){
@@ -21,22 +21,18 @@ class Button extends StatelessWidget {
 
     return Expanded(
       flex: flexy,
-      child: Container(
-        height: size,
-        width: size,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: NeumorphicButton(
-            onPressed: (){},
-            style: NeumorphicStyle(
-                boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(50))
-            ),
-            child: Center(
-              child: (
-                  Text(num)
-              ),
-            ),
-
+      child: Padding(
+        padding: EdgeInsets.all(8),
+        child: NeumorphicButton(
+          child: Center(child: Text(num,style: TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.w300
+          ),)),
+          onPressed: (){},
+          style: NeumorphicStyle(
+              boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(size))
+          ),
+          padding: EdgeInsets.all(MediaQuery.of(context).size.height*0.0243
           ),
         ),
       ),
