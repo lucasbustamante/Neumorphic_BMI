@@ -21,8 +21,8 @@ class _HomePageState extends State<HomePage> {
         children: [
           Display(),
           Divider(
-            thickness: 1,
-            color: kFontColor,
+            thickness: 1.5,
+            color: Colors.grey.shade400,
           ),
           SizedBox(height: 15),
           Container(
@@ -35,33 +35,34 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Button('7'),
                     Button('4'),
-                    Button('1')
+                    Button('1'),
+                    Expanded(child: Container(), flex: 1)
                   ],
                 ),),
                 Expanded(
                   child: Column(
                     children: [
-                      Button('8', flex: true,),
-                      Button('5', flex: true,),
-                      Button('2', flex: true,),
-                      Button('0', flex: true,)
+                      Button('8'),
+                      Button('5'),
+                      Button('2'),
+                      Button('0')
                     ],
                   ),
                 ),
                 Expanded(child: Column(
                   children: [
-                    Button('9', flex: true,),
-                    Button('6', flex: true,),
-                    Button('3', flex: true,),
-                    Button('.', flex: true,)
+                    Button('9'),
+                    Button('6'),
+                    Button('3'),
+                    Button('.')
                   ],
                 ),),
                 Expanded(
                   child: Column(
                     children: [
-                      Button('AC', flex: true,),
-                      Button('<',flex: true,),
-                      Button('GO', flex: true,)
+                      Button('AC', color: kPrimaryColor,),
+                      Button('<', color: kPrimaryColor,),
+                      Button('GO', color: kPrimaryColor,)
                     ],
                   ),
                 )],
