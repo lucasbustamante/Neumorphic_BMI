@@ -20,9 +20,12 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           Display(),
-          Divider(
-            thickness: 1.5,
-            color: Colors.grey.shade400,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Divider(
+              thickness: 1.5,
+              color: Colors.grey.shade400,
+            ),
           ),
           SizedBox(height: 15),
           Container(
