@@ -17,61 +17,68 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: NeumorphicTheme.baseColor(context),
-      body: Column(
-        children: [
-          Display(),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Divider(
-              thickness: 1.5,
-              color: Colors.grey.shade400,
+      body: SafeArea(
+        child: Column(
+          children: [
+            Text('IMC', style: TextStyle(
+              fontSize: 27,
+              fontWeight: FontWeight.w500,
+              color: kFontColor
+            ),),
+            Display(),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
+              child: Divider(
+                thickness: 1.5,
+                color: Colors.grey.shade400,
+              ),
             ),
-          ),
-          SizedBox(height: 15),
-          Container(
-              height: MediaQuery.of(context).size.height * 0.44,
-            width: MediaQuery.of(context).size.width,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Expanded(child: Column(
-                  children: [
-                    Button('7'),
-                    Button('4'),
-                    Button('1'),
-                    Expanded(child: Container(), flex: 1)
-                  ],
-                ),),
-                Expanded(
-                  child: Column(
+            SizedBox(height: 15),
+            Container(
+                height: MediaQuery.of(context).size.height * 0.44,
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(child: Column(
                     children: [
-                      Button('8'),
-                      Button('5'),
-                      Button('2'),
-                      Button('0')
+                      Button('7'),
+                      Button('4'),
+                      Button('1'),
+                      Expanded(child: Container(), flex: 1)
                     ],
+                  ),),
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Button('8'),
+                        Button('5'),
+                        Button('2'),
+                        Button('0')
+                      ],
+                    ),
                   ),
-                ),
-                Expanded(child: Column(
-                  children: [
-                    Button('9'),
-                    Button('6'),
-                    Button('3'),
-                    Button('.')
-                  ],
-                ),),
-                Expanded(
-                  child: Column(
+                  Expanded(child: Column(
                     children: [
-                      Button('AC', color: kPrimaryColor,),
-                      Button('<', color: kPrimaryColor,),
-                      Button('GO', color: kPrimaryColor,)
+                      Button('9'),
+                      Button('6'),
+                      Button('3'),
+                      Button('.')
                     ],
-                  ),
-                )],
+                  ),),
+                  Expanded(
+                    child: Column(
+                      children: [
+                        Button('AC', color: kPrimaryColor,),
+                        Button('←', color: kPrimaryColor, value: FontWeight.w900,),
+                        Button('GO', color: kPrimaryColor,)
+                      ],
+                    ),
+                  )],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
