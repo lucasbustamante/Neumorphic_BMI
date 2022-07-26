@@ -20,11 +20,6 @@ class _HomePageState extends State<HomePage> {
       body: SafeArea(
         child: Column(
           children: [
-            Text('IMC', style: TextStyle(
-              fontSize: 27,
-              fontWeight: FontWeight.w500,
-              color: kFontColor
-            ),),
             Display(),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),

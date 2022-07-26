@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
 
+import 'button_display_onoff.dart';
+
 
 class Button extends StatelessWidget {
   final String num;
@@ -37,7 +39,9 @@ class Button extends StatelessWidget {
           ),
           ),
           ),
-          onPressed: (){},
+          onPressed: (){
+            onoff('button');
+          },
           style: NeumorphicStyle(
               boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(size))
           ),
