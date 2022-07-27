@@ -106,7 +106,8 @@ class _HomePageState extends State<HomePage> {
                     child: Column(
                       children: [
                         Button('AC', color: kPrimaryColor, value: FontWeight.w500,),
-                        Button('←', color: kPrimaryColor, value: FontWeight.w900,),
+                        Button('←',
+                            color: kPrimaryColor, value: FontWeight.w900,),
                         Button('GO', color: kPrimaryColor,value: FontWeight.w500,),
                       ],
                     ),
