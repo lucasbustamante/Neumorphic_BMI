@@ -21,7 +21,7 @@ class _DisplayState extends State<Display> {
       return Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Container(
-          height: MediaQuery.of(context).size.height * 0.45,
+          height: MediaQuery.of(context).size.height * 0.40,
           child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(mainAxisAlignment: MainAxisAlignment.center,
@@ -72,14 +72,14 @@ class _DisplayState extends State<Display> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('$Alt',style: TextStyle(color: PesoColor,
+                  Text('$Peso',style: TextStyle(color: PesoColor,
                       fontWeight: FontWeight.w700,
                       fontSize: 35),),
                   Text('Kilogramas',style: TextStyle(color: kFontColor,
                       fontWeight: FontWeight.w500,
                       fontSize: 15) ),
                   SizedBox(height: size*0.09),
-                  Text('$Peso',style: TextStyle(color: AltColor,
+                  Text('$Alt',style: TextStyle(color: AltColor,
                       fontWeight: FontWeight.w700,
                       fontSize: 35),),
                   Text('Centimetros',style: TextStyle(color: kFontColor,

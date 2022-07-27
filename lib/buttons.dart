@@ -1,4 +1,4 @@
-import 'package:bmi/constants/colors.dart';
+/*import 'package:bmi/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
@@ -40,7 +40,7 @@ class Button extends StatelessWidget {
           ),
           ),
           onPressed: (){
-            onoff('button');
+            onoff(num);
           },
           style: NeumorphicStyle(
               boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(size))
@@ -51,4 +51,4 @@ class Button extends StatelessWidget {
       ),
     );
   }
-}
+}*/

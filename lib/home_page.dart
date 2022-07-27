@@ -2,17 +2,58 @@ import 'package:bmi/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
 
-import 'buttons.dart';
+import 'button_display_onoff.dart';
 import 'display.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
+
 class _HomePageState extends State<HomePage> {
+  Widget Button(String num, {Color? color, FontWeight? value}){
+
+    var size = MediaQuery.of(context).size.height*0.11;
+
+    if(value == null){
+      value = FontWeight.w500;
+    }
+    if(color == null){
+      color = kNumberColor;
+    }
+
+    return Expanded(
+      child: Padding(
+        padding: EdgeInsets.all(8),
+        child: NeumorphicButton(
+          child: Center(child:
+          Text(num,style: TextStyle(
+            fontSize: 25,
+            color: color,
+            fontWeight: value,
+          ),
+          ),
+          ),
+          onPressed: (){
+            setState((){
+              onoff(num);
+            });
+          },
+          style: NeumorphicStyle(
+              boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(size))
+          ),
+          padding: EdgeInsets.all(MediaQuery.of(context).size.height*0.0243
+          ),
+        ),
+      ),
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,9 +105,9 @@ class _HomePageState extends State<HomePage> {
                   Expanded(
                     child: Column(
                       children: [
-                        Button('AC', color: kPrimaryColor,),
+                        Button('AC', color: kPrimaryColor, value: FontWeight.w500,),
                         Button('←', color: kPrimaryColor, value: FontWeight.w900,),
-                        Button('GO', color: kPrimaryColor,)
+                        Button('GO', color: kPrimaryColor,value: FontWeight.w500,),
                       ],
                     ),
                   )],
