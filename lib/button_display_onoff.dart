@@ -1,3 +1,5 @@
+import 'package:bmi/home_page.dart';
+
 import 'constants/colors.dart';
 
 var PesoColor = kFontColor;
@@ -21,7 +23,9 @@ onoff (String touch) {
   }
   else if (touch == 'GO'){
     soma = double.parse(Peso) /(double.parse(Alt)* double.parse(Alt));
-    print(soma);
+    result = (soma.toString());
+    Peso2 = Peso;
+    Alt2 = Alt;
   }
   else if (touch == '←'){
   if(validador == 1){
@@ -57,3 +61,4 @@ onoff (String touch) {
   }
 
 }
+

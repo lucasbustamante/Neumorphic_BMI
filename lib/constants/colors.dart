@@ -5,4 +5,5 @@ const kNumberColor = Color(0xff4B5057);
 const kFontColor = Color(0xff878E96);
 const kGraphicColor1 = Color(0xff4B9EE1);
 const kGraphicColor2 = Color(0xff68CC78);
-const kGraphicColor3 = Color(0xffFF8B8B);
+
+const kGraphicColor3 = Color(0xfffd5353);

@@ -1,4 +1,7 @@
+import 'dart:ffi';
+
 import 'package:bmi/constants/colors.dart';
+import 'package:bmi/display_result.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
 
@@ -41,6 +44,12 @@ class _HomePageState extends State<HomePage> {
           onPressed: (){
             setState((){
               onoff(num);
+              print(Peso2);
+              if(num == 'GO' && Peso2 != '0' && Alt2 != '0'){
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Result(result: result)));
+              }
             });
           },
           style: NeumorphicStyle(
@@ -71,7 +80,7 @@ class _HomePageState extends State<HomePage> {
             ),
             SizedBox(height: 15),
             Container(
-                height: MediaQuery.of(context).size.height * 0.44,
+              height: MediaQuery.of(context).size.height * 0.44,
               width: MediaQuery.of(context).size.width,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -107,7 +116,7 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Button('AC', color: kPrimaryColor, value: FontWeight.w500,),
                         Button('←',
-                            color: kPrimaryColor, value: FontWeight.w900,),
+                          color: kPrimaryColor, value: FontWeight.w900,),
                         Button('GO', color: kPrimaryColor,value: FontWeight.w500,),
                       ],
                     ),
@@ -119,4 +128,13 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+}
+
+String result = '';
+String Peso2 = '';
+String Alt2 = '';
+teste (String result, String Peso2, String Alt2){
+  result = result;
+  Alt2 = Alt;
+  Peso2 = Peso;
 }
