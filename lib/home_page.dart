@@ -3,6 +3,7 @@ import 'dart:ffi';
 import 'package:bmi/constants/colors.dart';
 import 'package:bmi/display_result.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
 
 import 'button_display_onoff.dart';
@@ -61,6 +62,11 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+void initState(){
+    super.initState();
+    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+
+}
 
   @override
   Widget build(BuildContext context) {
