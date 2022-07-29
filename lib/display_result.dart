@@ -3,6 +3,8 @@ import 'package:bmi/display.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
 
+import 'button_display_onoff.dart';
+
 class Result extends StatelessWidget {
   final String result;
 
@@ -35,7 +37,7 @@ class Result extends StatelessWidget {
                 children: [
                  Row(mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('31.1',style: TextStyle(
+                        Text('$result',style: TextStyle(
                           color: kPrimaryColor,
                           fontSize: 70, fontWeight: FontWeight.w700
                         ),),
@@ -44,7 +46,7 @@ class Result extends StatelessWidget {
                           children: [
                             Text('IMC',style: TextStyle(fontWeight: FontWeight.w700,
                             color: kFontColor, fontSize: 35),),
-                            Text(result,style: TextStyle(
+                            Text(info,style: TextStyle(
                                 color: kPrimaryColor,
                                 fontSize: 15, fontWeight: FontWeight.w600
                             ),)

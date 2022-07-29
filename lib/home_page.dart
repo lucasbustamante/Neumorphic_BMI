@@ -44,7 +44,6 @@ class _HomePageState extends State<HomePage> {
           onPressed: (){
             setState((){
               onoff(num);
-              print(Peso2);
               if(num == 'GO' && Peso2 != '0' && Alt2 != '0'){
                 Navigator.push(
                     context,

@@ -9,6 +9,8 @@ String Alt = '0';
 int validador = 0;
 double receptor =  0;
 double soma = 0;
+String info = '';
+double calc = 0;
 
 onoff (String touch) {
   if (touch == 'peso') {
@@ -22,10 +24,26 @@ onoff (String touch) {
     validador = 2;
   }
   else if (touch == 'GO'){
-    soma = double.parse(Peso) /(double.parse(Alt)* double.parse(Alt));
-    result = (soma.toString());
+    if (double.parse((double.parse(Peso) /(double.parse(Alt)* double.parse(Alt)))
+        .toStringAsFixed(1)) == 0 ){
+      soma = (double.parse(Peso) /(double.parse(Alt)* double.parse(Alt))
+          );
+      soma *= 10000;
+    }else{
+     soma =  double.parse((double.parse(Peso) /(double.parse(Alt)* double.parse(Alt)))
+          .toStringAsFixed(1));
+    }
+    result = (soma.toStringAsPrecision(3));
     Peso2 = Peso;
     Alt2 = Alt;
+    if(soma <= 18.4 ){
+      info = 'Abaixo do peso';
+    }else if(soma >= 18.5 && soma <= 24.9){
+      info = 'Normal';
+    }
+    else{
+      info = 'Acima do peso';
+    }
   }
   else if (touch == '←'){
   if(validador == 1){
@@ -41,11 +59,11 @@ onoff (String touch) {
   }
   }
   else if(touch == 'AC'){
-    PesoColor = kFontColor;
-    AltColor = kFontColor;
     Peso = '0';
     Alt = '0';
-    validador = 0;
+    PesoColor = kPrimaryColor;
+    AltColor = kFontColor;
+    validador = 1;
   }
   else if (validador == 1){
     if (Peso == '0'){
