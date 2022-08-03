@@ -3,7 +3,7 @@
 * [Mockup](#Mockup-Oficial)
 * [Download](#Baixe-o-APK)
 
-[*Projeto inspirado em design encontrado retirado do Dribbble*](https://dribbble.com/shots/14439856-Neumorphic-BMI-Calculator)
+[*Projeto inspirado em design encontrado no Dribbble*](https://dribbble.com/shots/14439856-Neumorphic-BMI-Calculator)
 
 ## Mockup Oficial
 
