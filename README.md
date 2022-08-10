@@ -11,6 +11,6 @@
   <img src="/images/Scene_1.jpg" width="1000" />
 
 ## Baixe o APK
-[*clique aqui e baixe o apk para Android*](https://www.dropbox.com/sh/ohmafm1lt8uz39d/AADOZ4c6JJD47HWz8ix_T-SFa?dl=0)
+[*clique aqui e baixe o apk para Android*](https://github.com/LucasBustamante/Neumorphic_BMI/raw/master/app-release.apk)
 
 
