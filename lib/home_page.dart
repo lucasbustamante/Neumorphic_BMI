@@ -1,11 +1,8 @@
-import 'dart:ffi';
-
 import 'package:bmi/constants/colors.dart';
 import 'package:bmi/display_result.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
-
 import 'button_display_onoff.dart';
 import 'display.dart';
 
@@ -46,9 +43,12 @@ class _HomePageState extends State<HomePage> {
             setState((){
               onoff(num);
               if(num == 'GO' && Peso2 != '0' && Alt2 != '0'){
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Result(result: result)));
+                showModalBottomSheet(
+                    barrierColor: Colors.black.withAlpha(1),
+                    backgroundColor: Colors.transparent,
+                    context: context, builder: (BuildContext context){
+                  return Result(result: result);
+                });
               }
             });
           },

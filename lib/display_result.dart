@@ -15,50 +15,42 @@ class Result extends StatelessWidget {
 
     var size = MediaQuery.of(context).size.width;
 
-    return Scaffold(
-      backgroundColor: NeumorphicTheme.baseColor(context),
-      body: Column(mainAxisAlignment: MainAxisAlignment.center,
+    return Container(
+      color: NeumorphicTheme.baseColor(context),
+      child: Column(
         children: [
-          Display(),
+
           Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
-            child: Divider(
-              thickness: 1.5,
-              color: Colors.grey.shade400,
-            ),
-          ),
-          SizedBox(height: 15),
-          Padding(
-            padding: const EdgeInsets.symmetric(),
+            padding: const EdgeInsets.only(top: 50),
             child: Neumorphic(child: Container(
-              height: size/2,
-                width: size/1.2,
+              height: size/1.5,
+              width: size/1.2,
               child: Column(mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                 Row(mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text('$result',style: TextStyle(
+                  Row(mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text('$result',style: TextStyle(
                           color: kPrimaryColor,
                           fontSize: 70, fontWeight: FontWeight.w700
-                        ),),
-                        SizedBox(width: 10),
-                        Column(
-                          children: [
-                            Text('IMC',style: TextStyle(fontWeight: FontWeight.w700,
-                            color: kFontColor, fontSize: 35),),
-                            Text(info,style: TextStyle(
-                                color: kPrimaryColor,
-                                fontSize: 15, fontWeight: FontWeight.w600
-                            ),)
-                          ],
-                        )
-                      ],
-                    ),
+                      ),),
+                      SizedBox(width: 10),
+                      Column(
+                        children: [
+                          Text('IMC',style: TextStyle(fontWeight: FontWeight.w700,
+                              color: kFontColor, fontSize: 35),),
+                          Text(info,style: TextStyle(
+                              color: kPrimaryColor,
+                              fontSize: 15, fontWeight: FontWeight.w600
+                          ),)
+                        ],
+                      )
+                    ],
+                  ),
                   SizedBox(height: size/25),
                   Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       Text('Abaixo do peso', style: TextStyle(color: kGraphicColor1,
-                      fontWeight: FontWeight.w600),),
+                          fontWeight: FontWeight.w600),),
                       Text('Normal', style: TextStyle(color: kGraphicColor2,
                           fontWeight: FontWeight.w600),),
                       Text('Acima do peso', style: TextStyle(color: kGraphicColor3,
@@ -71,9 +63,9 @@ class Result extends StatelessWidget {
                     width: size/1.33,
                     decoration: BoxDecoration(
                         gradient: LinearGradient(
-                          colors: [kGraphicColor1, kGraphicColor2, kGraphicColor3]
+                            colors: [kGraphicColor1, kGraphicColor2, kGraphicColor3]
                         ),
-                      borderRadius: BorderRadius.circular(50)
+                        borderRadius: BorderRadius.circular(50)
                     ),
                   ),
                   SizedBox(height: size/40),
@@ -92,7 +84,7 @@ class Result extends StatelessWidget {
               ),
             ),
               style: NeumorphicStyle(
-                boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(35))
+                  boxShape: NeumorphicBoxShape.roundRect(BorderRadius.circular(35))
               ),
             ),
           ),
@@ -102,12 +94,12 @@ class Result extends StatelessWidget {
               Navigator.pop(context);
             },
             style: NeumorphicStyle(
-              boxShape: NeumorphicBoxShape.circle()
+                boxShape: NeumorphicBoxShape.circle()
             ),
             child: Container(
               height: size/7,
               child: Center(child: Icon(Icons.keyboard_arrow_left_outlined, color: kPrimaryColor,
-              size: 45,)),
+                size: 45,)),
             ),
           )
         ],
